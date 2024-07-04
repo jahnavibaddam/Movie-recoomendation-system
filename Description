@@ -1,1 +1,48 @@
 MOVIE RECOMMENDATION SYSTEM USING DATA SCIENCE
+Here's a step-by-step explanation of what the code does:
+
+Import Libraries:
+pandas for data manipulation.
+re for regular expressions.
+sklearn for machine learning tools.
+numpy for numerical operations.
+ipywidgets and IPython.display for interactive widgets.
+
+Load Movie Data:
+Loads the movie data from a CSV file into a DataFrame called movies.
+Displays the first few rows of the movies DataFrame.
+
+Clean Movie Titles:
+Defines a function clean_title that removes non-alphanumeric characters from movie titles.
+Applies this function to the title column of the movies DataFrame, creating a new column clean_title.
+
+TF-IDF Vectorization:
+Initializes a TfidfVectorizer to convert movie titles into a matrix of TF-IDF features.
+Fits and transforms the clean_title column into TF-IDF features.
+
+Cosine Similarity Search:
+Defines a function search to find movies similar to a given title using cosine similarity.
+The function cleans the input title, transforms it into TF-IDF features, and computes cosine similarities with all movie titles.
+Returns the top 5 most similar movies.
+
+Interactive Movie Search:
+Creates an interactive text widget to input movie titles.
+Defines a callback function on_type to handle user input, search for similar titles, and display results dynamically.
+Displays the input widget and output area in the notebook.
+
+Load Ratings Data:
+Loads movie ratings data from a CSV file into a DataFrame called ratings.
+Displays the data types of the ratings DataFrame columns.
+
+Find Similar Movies:
+Defines a function find_similar_movies to find movies similar to a given movie based on user ratings.
+Finds users who rated a given movie highly, identifies other movies these users rated highly, and calculates recommendation scores.
+Merges the recommendations with movie data and returns the top 10 recommended movies.
+
+Interactive Recommendation System:
+Creates another interactive text widget for inputting movie titles.
+Defines a callback function on_type to handle user input, search for similar titles, find similar movies based on the top result, and display recommendations dynamically.
+Displays the input widget and output area in the notebook.
+
+
+In summary, this code allows users to search for movies and get recommendations based on movie titles and user ratings
